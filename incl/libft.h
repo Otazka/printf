@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: elsurovt <elsurovt@student.42.fr>          +#+  +:+       +#+        */
+/*   By: elenasurovtseva <elenasurovtseva@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/26 03:20:09 by elsurovt          #+#    #+#             */
-/*   Updated: 2024/06/01 14:09:33 by elsurovt         ###   ########.fr       */
+/*   Updated: 2024/06/18 01:38:46 by elenasurovt      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,6 @@
 # include <stdio.h>
 # include <strings.h>
 # include <stddef.h>
-
-
 
 //------------LIBFT---------------/
 // Mandatory Part 1:
