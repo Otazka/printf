@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -I../includes/
+CFLAGS = -Wall -Wextra -Werror -I../incl/
 RM = rm -rf
 NAME = libft.a
 
