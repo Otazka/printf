@@ -1,26 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_put_utils.c                              :+:      :+:    :+:   */
+/*   ft_convert_option.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elenasurovtseva <elenasurovtseva@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/15 15:23:15 by elenasurovt       #+#    #+#             */
-/*   Updated: 2024/06/17 22:58:54 by elenasurovt      ###   ########.fr       */
+/*   Created: 2024/06/15 15:20:04 by elenasurovt       #+#    #+#             */
+/*   Updated: 2024/06/18 01:06:08 by elenasurovt      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../incl/ft_printf.h"
 
-void	ft_unsigned_putnbr_fd(unsigned int n, int fd)
+//character
+
+void	ft_putcharacter_length(char character, int *length)
 {
-	if (n > 9)
+	write(1, &character, 1);
+	(*length)++;
+}
+
+//string
+
+void	ft_string(char *args, int *length)
+{
+	size_t	i;
+
+	i = 0;
+	if (!args)
 	{
-		ft_putnbr_fd(n / 10, fd);
-		ft_putnbr_fd(n % 10, fd);
+		write(1, "(null)", 6);
+		(*length) += 6;
+		return ;
 	}
-	if (n <= 9)
+	while (args[i] != '\0')
 	{
-		ft_putchar_fd(n + '0', fd);
+		ft_putcharacter_length(args[i], length);
+		i++;
 	}
 }

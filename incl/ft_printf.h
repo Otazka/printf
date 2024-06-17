@@ -6,7 +6,7 @@
 /*   By: elenasurovtseva <elenasurovtseva@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 15:18:15 by elenasurovt       #+#    #+#             */
-/*   Updated: 2024/06/17 23:59:18 by elenasurovt      ###   ########.fr       */
+/*   Updated: 2024/06/18 00:47:58 by elenasurovt      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,13 +32,11 @@ int		    ft_nbr_length(int n);
 int		    ft_unsigned_nbr_length(unsigned int n);
 int		    ft_convert_hex(size_t nb);
 int		    ft_convert_hex_upper(unsigned int nb);
-int		    ft_convert_p(va_list arg);
-int		    ft_convert_u(va_list arg);
-int		    ft_convert_c(va_list arg);
-int		    ft_convert_s(va_list arg);
-int		    ft_convert_di(va_list arg);
-int		    ft_convert_x(va_list arg);
-int		    ft_convert_xx(va_list arg);
+void        ft_pointer(size_t pointer, int *length);
+void        ft_convert_unsigned_int(unsigned int u, int *length);
+int		    ft_convert_string(va_list arg);
+void        ft_hexadecimal(unsigned int x, int *length, char x_or_x);
+void        ft_putcharacter_length(char character, int *length);
 static void ft_chose_convert(char s, va_list *args, int *len, int *i);
 int		    ft_printf(const char *format, ...);
 void	    ft_unsigned_putnbr_fd(unsigned int n, int fd);
