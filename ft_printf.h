@@ -6,7 +6,7 @@
 /*   By: elenasurovtseva <elenasurovtseva@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 15:18:15 by elenasurovt       #+#    #+#             */
-/*   Updated: 2024/06/17 17:38:29 by elenasurovt      ###   ########.fr       */
+/*   Updated: 2024/06/17 17:58:54 by elenasurovt      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 #  define PTR_NULL "(nil)"
 # endif
 
+# include "libft.h"
 # include <unistd.h>
 # include <stdio.h>
 # include <stdarg.h>
