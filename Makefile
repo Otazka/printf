@@ -3,9 +3,7 @@ CFLAGS = -Wall -Wextra -Werror -I./incl/
 RM = rm -rf
 NAME = libftprintf.a
 
-SRCS = ./srcs/ft_printf.c \
-	   	./srcs/ft_numbers.c \
-		./srcs/ft_words.c \
+SRCS = ft_printf.c srcs/ft_words.c srcs/ft_numbers.c
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
