@@ -6,7 +6,7 @@
 /*   By: elenasurovtseva <elenasurovtseva@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 15:18:15 by elenasurovt       #+#    #+#             */
-/*   Updated: 2024/06/18 01:20:39 by elenasurovt      ###   ########.fr       */
+/*   Updated: 2024/06/18 01:27:54 by elenasurovt      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@
 # include <stddef.h>
 # include <limits.h>
 
-static void	    ft_printf_checker(char s, va_list *args, int *len, int *i);
 void			ft_putcharacter_length(char character, int *length);
 void			ft_string(char *args, int *length);
 void			ft_number(int number, int *length);
