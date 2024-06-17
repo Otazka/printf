@@ -6,7 +6,7 @@
 /*   By: elenasurovtseva <elenasurovtseva@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 15:18:15 by elenasurovt       #+#    #+#             */
-/*   Updated: 2024/06/17 22:58:41 by elenasurovt      ###   ########.fr       */
+/*   Updated: 2024/06/17 23:59:18 by elenasurovt      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,19 +27,19 @@
 # include <stddef.h>
 # include <limits.h>
 
-int		ft_hex_length(int n);
-int		ft_nbr_length(int n);
-int		ft_unsigned_nbr_length(unsigned int n);
-int		ft_convert_hex(size_t nb);
-int		ft_convert_hex_upper(unsigned int nb);
-int		ft_convert_p(va_list arg);
-int		ft_convert_u(va_list arg);
-int		ft_convert_c(va_list arg);
-int		ft_convert_s(va_list arg);
-int		ft_convert_di(va_list arg);
-int		ft_convert_x(va_list arg);
-int		ft_convert_xx(va_list arg);
-int		ft_chose_convert(va_list arg, char c);
-int		ft_printf(const char *format, ...);
-void	ft_unsigned_putnbr_fd(unsigned int n, int fd);
+int		    ft_hex_length(int n);
+int		    ft_nbr_length(int n);
+int		    ft_unsigned_nbr_length(unsigned int n);
+int		    ft_convert_hex(size_t nb);
+int		    ft_convert_hex_upper(unsigned int nb);
+int		    ft_convert_p(va_list arg);
+int		    ft_convert_u(va_list arg);
+int		    ft_convert_c(va_list arg);
+int		    ft_convert_s(va_list arg);
+int		    ft_convert_di(va_list arg);
+int		    ft_convert_x(va_list arg);
+int		    ft_convert_xx(va_list arg);
+static void ft_chose_convert(char s, va_list *args, int *len, int *i);
+int		    ft_printf(const char *format, ...);
+void	    ft_unsigned_putnbr_fd(unsigned int n, int fd);
 #endif
