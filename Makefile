@@ -1,21 +1,25 @@
+CC = cc
+CFLAGS = -Wall -Wextra -Werror -I./includes/
+RM = rm -rf
 NAME = libftprintf.a
-SRC_FILE = ft_printf_put_utils.c ft_printf_utils.c ft_printf_convert_utils.c \
-			ft_convert_option.c ft_chose_convert.c ft_printf.c
 
-OBJ_FILE = $(SRC_FILE:.c=.o)
+SRCS = ft_printf.c srcs/prt_hexa.c srcs/prt_int.c srcs/prt_ptr.c srcs/prt_str.c srcs/prt_unsigned.c
+OBJS = $(SRCS:.c=.o)
 
-all = $(NAME)
+all: $(NAME)
 
-$(NAME):	$(OBJ_FILE)
-	ar rc $(NAME) $(OBJ_FILE)
+$(NAME): $(OBJS)
+	$(MAKE) -C ./libft
+	cp libft/libft.a $(NAME)
+	ar rc $(NAME) $(OBJS)
+clean:
+	$(MAKE) clean -C ./libft
+	$(RM) $(OBJS)
+fclean: clean
+	$(MAKE) fclean -C ./libft
+	$(RM) $(NAME)
+re: fclean all
 
-$(OBJ_FILE):	$(SRC_FILE)
-	gcc -Wall -Wextra -Werror -c $(SRC_FILE)
+.PHONY: all clean fclean re
 
-clean :
-	rm -rf $(OBJ_FILE)
-fclean : clean
-	rm -rf $(NAME)
-
-re : fclean $(NAME)
-.PHONY : all clean fclean re
+.SILENT:

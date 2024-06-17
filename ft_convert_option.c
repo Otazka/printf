@@ -6,7 +6,7 @@
 /*   By: elenasurovtseva <elenasurovtseva@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 15:20:04 by elenasurovt       #+#    #+#             */
-/*   Updated: 2024/06/17 17:44:20 by elenasurovt      ###   ########.fr       */
+/*   Updated: 2024/06/17 17:47:50 by elenasurovt      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	ft_convert_s(va_list arg)
 	s = va_arg(arg, char *);
 	if (!s)
 	{
-		ft_putstr_fd("(nil)", 1);
+		ft_putstr_fd("(null)", 1);
 		return (6);
 	}
 	ft_putstr_fd(s, 1);
