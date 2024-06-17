@@ -6,7 +6,7 @@
 /*   By: elenasurovtseva <elenasurovtseva@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 15:17:22 by elenasurovt       #+#    #+#             */
-/*   Updated: 2024/06/17 23:07:33 by elenasurovt      ###   ########.fr       */
+/*   Updated: 2024/06/18 01:11:35 by elenasurovt      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,27 @@
 
 int	ft_printf(const char *format, ...)
 {
-	int		len;
-	int		count;
-	va_list	arg;
+	va_list	args;
+	int		i;
+	int		length;
 
-	count = 0;
-	len = 0;
-	va_start(arg, format);
-	if (ft_strchr((char *)format, '%') == 0)
+	i = 0;
+	length = 0;
+	va_start(args, format;
+	while (format[i] != '\0')
 	{
-		ft_putstr_fd((char *)format, 1);
-		return (ft_strlen(format));
-	}
-	while (format[count])
-	{
-		if (format[count] != '%')
-			len += write(1, &format[count], 1);
+		if (format[i] == '%')
+		{
+			i++;
+			ft_printf_checker(format[i], &args, &length, &i);
+			i++;
+		}
 		else
 		{
-			len += (ft_chose_convert(arg, format[count + 1]));
-			count++;
+			ft_putcharacter_length((char)format[i], &length);
+			i++;
 		}
-		count++;
 	}
-	va_end(arg);
-	return (len);
+	va_end(args);
+	return (length);
 }
