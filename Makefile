@@ -1,9 +1,9 @@
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -I./includes/
+CFLAGS = -Wall -Wextra -Werror -I./incl/
 RM = rm -rf
 NAME = libftprintf.a
 
-SRCS = ft_printf.c srcs/prt_hexa.c srcs/prt_int.c srcs/prt_ptr.c srcs/prt_str.c srcs/prt_unsigned.c
+SRCS = ft_printf.c srcs/ft_chose_convert.c srcs/ft_convert_option.c srcs/ft_printf_convert_utils.c srcs/ft_printf_utils.c src/ft_printf_put_utils.c
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
