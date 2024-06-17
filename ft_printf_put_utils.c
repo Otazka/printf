@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_char.c                                    :+:      :+:    :+:   */
+/*   ft_printf_put_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elenasurovtseva <elenasurovtseva@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 15:23:15 by elenasurovt       #+#    #+#             */
-/*   Updated: 2024/06/15 15:23:20 by elenasurovt      ###   ########.fr       */
+/*   Updated: 2024/06/17 17:39:38 by elenasurovt      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,4 +63,3 @@ void	ft_unsigned_putnbr_fd(unsigned int n, int fd)
 		ft_putchar_fd(n + '0', fd);
 	}
 }
-
