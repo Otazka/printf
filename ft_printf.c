@@ -6,11 +6,11 @@
 /*   By: elenasurovtseva <elenasurovtseva@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 15:17:22 by elenasurovt       #+#    #+#             */
-/*   Updated: 2024/06/17 22:59:00 by elenasurovt      ###   ########.fr       */
+/*   Updated: 2024/06/17 23:07:33 by elenasurovt      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "incl/ft_printf.h"
 
 int	ft_printf(const char *format, ...)
 {
