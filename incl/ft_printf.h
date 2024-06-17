@@ -6,7 +6,7 @@
 /*   By: elenasurovtseva <elenasurovtseva@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 15:18:15 by elenasurovt       #+#    #+#             */
-/*   Updated: 2024/06/17 17:58:54 by elenasurovt      ###   ########.fr       */
+/*   Updated: 2024/06/17 22:58:41 by elenasurovt      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,6 @@
 # include <stddef.h>
 # include <limits.h>
 
-size_t	ft_strlen(const char *s);
-int		ft_strchr(char *s, char c);
 int		ft_hex_length(int n);
 int		ft_nbr_length(int n);
 int		ft_unsigned_nbr_length(unsigned int n);
@@ -43,8 +41,5 @@ int		ft_convert_x(va_list arg);
 int		ft_convert_xx(va_list arg);
 int		ft_chose_convert(va_list arg, char c);
 int		ft_printf(const char *format, ...);
-void	ft_putchar_fd(char c, int fd);
-void	ft_putstr_fd(char *s, int fd);
-void	ft_putnbr_fd(int n, int fd);
 void	ft_unsigned_putnbr_fd(unsigned int n, int fd);
 #endif
