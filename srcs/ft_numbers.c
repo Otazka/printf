@@ -6,7 +6,7 @@
 /*   By: elenasurovtseva <elenasurovtseva@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 15:21:48 by elenasurovt       #+#    #+#             */
-/*   Updated: 2024/06/18 10:02:17 by elenasurovt      ###   ########.fr       */
+/*   Updated: 2024/06/18 10:17:07 by elenasurovt      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,13 @@ void	ft_number(int number, int *length)
 
 void	ft_pointer(size_t pointer, int *length)
 {
-	char	string[25];
+	char	string;
 	int		i;
 	char	*base_character;
 
+	string = (char *)malloc(25 * sizeof(char));
+	if(!string)
+	return ;
 	base_character = "0123456789abcdef";
 	i = 0;
 	write(1, "0x", 2);
@@ -47,6 +50,7 @@ void	ft_pointer(size_t pointer, int *length)
 	if (pointer == 0)
 	{
 		ft_putcharacter_length('0', length);
+		free(string);
 		return ;
 	}
 	while (pointer != 0)
@@ -59,14 +63,18 @@ void	ft_pointer(size_t pointer, int *length)
 	{
 		ft_putcharacter_length(string[i], length);
 	}
+	free(string);
 }
 
 void	ft_hexadecimal(unsigned int x, int *length, char x_or_x)
 {
-	char	string[25];
+	char	string;
 	char	*base_character;
 	int		i;
 
+	string = (char *)malloc(25 * sizeof(char));
+	if (!string)
+		return ;
 	if (x_or_x == 'X')
 		base_character = "0123456789ABCDEF";
 	else
@@ -75,6 +83,7 @@ void	ft_hexadecimal(unsigned int x, int *length, char x_or_x)
 	if (x == 0)
 	{
 		ft_putcharacter_length('0', length);
+		free(string);
 		return ;
 	}
 	while (x != 0)
@@ -85,6 +94,7 @@ void	ft_hexadecimal(unsigned int x, int *length, char x_or_x)
 	}
 	while (i--)
 		ft_putcharacter_length(string[i], length);
+	free(string);
 }
 
 void	ft_unsigned_int(unsigned int u, int *length)
