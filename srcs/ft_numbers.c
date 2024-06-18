@@ -6,12 +6,11 @@
 /*   By: elenasurovtseva <elenasurovtseva@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 15:21:48 by elenasurovt       #+#    #+#             */
-/*   Updated: 2024/06/18 10:17:07 by elenasurovt      ###   ########.fr       */
+/*   Updated: 2024/06/18 10:32:16 by elenasurovt      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/ft_printf.h"
-
 
 void	ft_number(int number, int *length)
 {
@@ -36,12 +35,12 @@ void	ft_number(int number, int *length)
 
 void	ft_pointer(size_t pointer, int *length)
 {
-	char	string;
+	char	*string;
 	int		i;
 	char	*base_character;
 
 	string = (char *)malloc(25 * sizeof(char));
-	if(!string)
+	if (!string)
 	return ;
 	base_character = "0123456789abcdef";
 	i = 0;
@@ -68,7 +67,7 @@ void	ft_pointer(size_t pointer, int *length)
 
 void	ft_hexadecimal(unsigned int x, int *length, char x_or_x)
 {
-	char	string;
+	char	*string;
 	char	*base_character;
 	int		i;
 
