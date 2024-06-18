@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_convert_option.c                                :+:      :+:    :+:   */
+/*   ft_words.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elenasurovtseva <elenasurovtseva@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 15:20:04 by elenasurovt       #+#    #+#             */
-/*   Updated: 2024/06/18 01:06:08 by elenasurovt      ###   ########.fr       */
+/*   Updated: 2024/06/18 10:02:15 by elenasurovt      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/ft_printf.h"
-
-//character
 
 void	ft_putcharacter_length(char character, int *length)
 {
 	write(1, &character, 1);
 	(*length)++;
 }
-
-//string
 
 void	ft_string(char *args, int *length)
 {

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_convert_utils.c                          :+:      :+:    :+:   */
+/*   ft_numbers.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elenasurovtseva <elenasurovtseva@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 15:21:48 by elenasurovt       #+#    #+#             */
-/*   Updated: 2024/06/18 01:06:53 by elenasurovt      ###   ########.fr       */
+/*   Updated: 2024/06/18 10:02:17 by elenasurovt      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,6 @@ void	ft_number(int number, int *length)
 		ft_putcharacter_length(number % 10 + '0', length);
 	}
 }
-
-//pointer
 
 void	ft_pointer(size_t pointer, int *length)
 {
@@ -63,8 +61,6 @@ void	ft_pointer(size_t pointer, int *length)
 	}
 }
 
-//hexadecimal - x or X
-
 void	ft_hexadecimal(unsigned int x, int *length, char x_or_x)
 {
 	char	string[25];
@@ -90,8 +86,6 @@ void	ft_hexadecimal(unsigned int x, int *length, char x_or_x)
 	while (i--)
 		ft_putcharacter_length(string[i], length);
 }
-
-//unsigned int
 
 void	ft_unsigned_int(unsigned int u, int *length)
 {
